@@ -11,7 +11,6 @@ CORS(app)
 # - You are free to use additional data structures in your solution
 # - You must define and tell your tutor one edge case you have devised and how you have addressed this
 
-
 def error_response(message):
     return jsonify({"error": message}), 404
 
@@ -40,6 +39,7 @@ def _optional_mark(data):
     if mark < 0 or mark > 100:
         raise ValueError("mark must be between 0 and 100")
     return mark
+
 
 @app.route("/students")
 def get_students():
